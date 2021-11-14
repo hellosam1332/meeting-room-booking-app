@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "serverless"
   },
   "dependencies": {
     "next": "12.0.3",
@@ -17,6 +18,7 @@
     "@types/react": "17.0.34",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "serverless": "^2.66.1"
   }
 }

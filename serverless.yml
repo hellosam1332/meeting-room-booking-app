@@ -1,0 +1,5 @@
+myNextApplication:
+  component: "@sls-next/serverless-component@latest"
+  inputs:
+    cloudfront:
+      comment: 'next deploy'
