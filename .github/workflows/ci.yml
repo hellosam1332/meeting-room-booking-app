@@ -8,12 +8,12 @@ jobs:
   run-ci:
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      -name: Install Packages
-      -run: rm -rf node_modules && yarn install --frozen-lockfile
+      - name: Install Packages
+        run: rm -rf node_modules && yarn install --frozen-lockfile
 
-      -name: Lint Test
-      -run: yarn lint
+      - name: Lint Test
+        run: yarn lint
       
