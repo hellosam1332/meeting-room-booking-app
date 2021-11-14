@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout code
+        uses: actions/checkout@v2
+
+      -name: Install Packages
+      -run: rm -rf node_modules && yarn install --frozen-lockfile
+
+      -name: Lint Test
+      -run: yarn lint
+      
