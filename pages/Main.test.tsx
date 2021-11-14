@@ -5,6 +5,6 @@ describe("Main", () => {
   it("render", () => {
     const { container } = render(<Main />);
 
-    expect(container).toHaveTextContent("meeting-room-booking-app");
+    expect(container).toHaveTextContent("meeting-room-booking-apssssp");
   });
 });
