@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
+import Main from "./Main";
 
 const Home: NextPage = () => {
-  return <h2>Hello meeting-room-booking-app</h2>;
+  return <Main />;
 };
 
 export default Home;
