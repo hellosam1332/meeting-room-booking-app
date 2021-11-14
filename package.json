@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "serverless"
+    "deploy": "serverless",
+    "test": "jest"
   },
   "dependencies": {
     "next": "12.0.3",
@@ -14,6 +15,8 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
@@ -22,6 +25,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.1",
     "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "babel-jest": "^27.3.1",
     "eslint-config-next": "12.0.3",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -33,6 +37,9 @@
     "prettier": "^2.4.1",
     "prettier-eslint-cli": "^5.0.1",
     "serverless": "^2.66.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
+    "react-test-renderer": "^17.0.2",
     "typescript": "4.4.4"
   }
 }
