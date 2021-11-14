@@ -1,0 +1,49 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:react/recommended", 
+      "airbnb", 
+      "airbnb-typescript", 
+      "airbnb-typescript-prettier",
+      "next/core-web-vitals"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module",
+      "project": ["./tsconfig.json"]
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "rules": {
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error"],
+      "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+      "react/jsx-filename-extension": [
+        "error",
+        { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+      ],
+      "react/jsx-first-prop-new-line": ["error", "multiline"],
+      "react/jsx-indent-props": ["error", 2],
+      "react/jsx-max-props-per-line": [
+        "error",
+        { "maximum": 1, "when": "multiline" }
+      ],
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/require-default-props": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/style-prop-object": ["error", { "allow": ["StatusBar"] }],
+      "semi": ["error", "always"],
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  }
+  
