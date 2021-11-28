@@ -1,3 +1,10 @@
+import BookingPanel from "../src/components/BookingPanel";
+
 export default function Main() {
-  return <h2>Hello meeting-room-booking-app</h2>;
+  return (
+    <>
+      <BookingPanel />
+      <h2>Hello meeting-room-booking-app</h2>
+    </>
+  );
 }
