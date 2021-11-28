@@ -5,9 +5,9 @@
       "node": true
     },
     "extends": [
-      "plugin:react/recommended", 
-      "airbnb", 
-      "airbnb-typescript", 
+      "plugin:react/recommended",
+      "airbnb",
+      "airbnb-typescript",
       "airbnb-typescript-prettier",
       "next/core-web-vitals"
     ],
@@ -17,8 +17,7 @@
         "jsx": true
       },
       "ecmaVersion": 12,
-      "sourceType": "module",
-      "project": ["./tsconfig.json"]
+      "sourceType": "module"
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
@@ -46,4 +45,3 @@
       "@typescript-eslint/explicit-module-boundary-types": "off"
     }
   }
-  
