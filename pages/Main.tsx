@@ -6,7 +6,7 @@ import Header from "../src/components/Header";
 export default function Main() {
   const { data } = useSession();
 
-  if (!data?.user) {
+  if (!data) {
     return null;
   }
 

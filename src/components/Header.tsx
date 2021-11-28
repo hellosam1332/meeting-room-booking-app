@@ -1,4 +1,3 @@
-import { useSession } from "next-auth/react";
 import React from "react";
 
 type User = {
@@ -8,10 +7,14 @@ type User = {
 };
 
 interface Props {
-  user: User;
+  user: User | null;
 }
 
 function Header({ user }: Props) {
+  if (!user) {
+    return null;
+  }
+
   return (
     <>
       <div>{user.name}</div>
