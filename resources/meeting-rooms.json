@@ -1,0 +1,53 @@
+[
+  {
+    "13F": [] 
+  },
+  { 
+    "14F": [] 
+  },
+  { 
+    "15F": [] 
+  },
+  { 
+    "16F": [] 
+  },
+  { 
+    "17F": [] 
+  },
+  { 
+    "18F": [
+      {
+        "name": "독도",
+        "calendar_id": "dokdo"
+      },
+      { 
+        "name": "몰디브", 
+        "calendar_id": "maldives" 
+      },
+      { 
+        "name": "산토리니", 
+        "calendar_id": "santorini" 
+      },
+      { 
+        "name": "세이셸", 
+        "calendar_id": "seychelles"
+      },
+      { 
+        "name": "갈라파고스", 
+        "calendar_id": "galapagos" 
+      },
+      { 
+        "name": "마다카스가르", 
+        "calendar_id": "madagascar" 
+      },
+      { 
+        "name": "발리", 
+        "calendar_id": "bali" 
+      },
+      { 
+        "name": "보라보라", 
+        "calendar_id": "borabora" 
+      }
+    ] 
+  }
+]
