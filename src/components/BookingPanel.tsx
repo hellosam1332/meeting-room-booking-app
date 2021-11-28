@@ -28,7 +28,7 @@ const Level = styled.span`
 `;
 
 interface Props {
-  meetingRooms: any;
+  meetingRooms?: any;
 }
 
 export default function BookingPanel({ meetingRooms }: Props) {
