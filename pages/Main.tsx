@@ -1,7 +1,6 @@
 import { useSession } from "next-auth/react";
-import BookingPanel from "../src/components/BookingPanel";
-import meetingRooms from "../resources/meeting-rooms.json";
 import Header from "../src/components/Header";
+import MeetingScheduleContainer from "../src/container/MeetingScheduleContainer";
 
 export default function Main() {
   const { data } = useSession();
@@ -10,11 +9,13 @@ export default function Main() {
     return null;
   }
 
+  // temporary
+  const calendarId = "c_qslsg84640cdcd43l5tr2s2gcg@group.calendar.google.com";
+
   return (
     <>
       <Header user={data.user} />
-      {/* <BookingPanel meetingRooms={meetingRooms} /> */}
-      <h2>Hello meeting-room-booking-app</h2>
+      <MeetingScheduleContainer calendarId={calendarId} />
     </>
   );
 }
