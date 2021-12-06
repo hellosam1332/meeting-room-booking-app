@@ -1,52 +1,34 @@
 [
   {
-    "13F": []
+    "id": 13,
+    "meetingRooms": []
   },
   {
-    "14F": []
+    "id": 14,
+    "meetingRooms": []
   },
   {
-    "15F": []
+    "id": 15,
+    "meetingRooms": []
   },
   {
-    "16F": []
+    "id": 16,
+    "meetingRooms": []
   },
   {
-    "17F": []
+    "id": 17,
+    "meetingRooms": []
   },
   {
-    "18F": [
+    "id": 18,
+    "meetingRooms": [
       {
         "name": "독도",
-        "calendar_id": "dokdo"
-      },
-      {
-        "name": "몰디브",
-        "calendar_id": "maldives"
-      },
-      {
-        "name": "산토리니",
-        "calendar_id": "santorini"
+        "id": "c_mfp9i93o7p41nuf3ctkgadu9r0@group.calendar.google.com"
       },
       {
         "name": "세이셸",
-        "calendar_id": "seychelles"
-      },
-      {
-        "name": "갈라파고스",
-        "calendar_id": "galapagos"
-      },
-      {
-        "name": "마다카스가르",
-        "calendar_id": "madagascar"
-      },
-      {
-        "name": "발리",
-        "calendar_id": "bali"
-      },
-      {
-        "name": "보라보라",
-        "calendar_id": "borabora"
+        "id": "c_nc91ol8eqe3hlefjvd0vsqh558@group.calendar.google.com"
       }
     ]
   }

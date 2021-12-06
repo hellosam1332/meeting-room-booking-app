@@ -10,14 +10,17 @@ const Container = styled.div`
 `;
 
 interface Props {
-  schedules: CalendarEvent[];
+  loading: boolean;
+  events: CalendarEvent[];
 }
 
-export default function MeetingSchedules({ schedules }: Props) {
+export default function MeetingSchedules({ loading, events }: Props) {
   return (
     <Container>
-      {schedules.map((schedule) => (
-        <EventCard key={schedule.id} event={schedule} />
+      {loading && <h2>Loading ...</h2>}
+      {events.length === 0 && <h2>Empty</h2>}
+      {events.map((event) => (
+        <EventCard key={event.id} event={event} />
       ))}
     </Container>
   );

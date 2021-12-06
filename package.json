@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "serverless",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",

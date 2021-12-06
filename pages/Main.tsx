@@ -1,6 +1,9 @@
 import { useSession } from "next-auth/react";
+import { Provider } from "react-redux";
 import Header from "../src/components/Header";
 import MeetingScheduleContainer from "../src/container/MeetingScheduleContainer";
+import store from "../src/store";
+import BookingPanelContainer from "../src/container/BookingPanelContainer";
 
 export default function Main() {
   const { data } = useSession();
@@ -9,13 +12,11 @@ export default function Main() {
     return null;
   }
 
-  // temporary
-  const calendarId = "c_qslsg84640cdcd43l5tr2s2gcg@group.calendar.google.com";
-
   return (
-    <>
+    <Provider store={store}>
       <Header user={data.user} />
-      <MeetingScheduleContainer calendarId={calendarId} />
-    </>
+      <BookingPanelContainer />
+      <MeetingScheduleContainer />
+    </Provider>
   );
 }
