@@ -4,6 +4,16 @@ import { AppState } from "../slice";
 
 export default function BookingPanelContainer() {
   const { officeFloor } = useSelector((state) => state as AppState);
+  const selectedFloor = officeFloor.find((floor) => floor.selected);
 
-  return <BookingPanel officeFloors={officeFloor} />;
+  if (!selectedFloor) {
+    return null;
+  }
+
+  return (
+    <BookingPanel
+      officeFloors={officeFloor}
+      selectedMeetingRoom={selectedFloor.meetingRooms}
+    />
+  );
 }
