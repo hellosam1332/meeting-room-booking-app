@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MeetingSchedules from "../components/MeetingSchedules";
+import { AppState } from "../slice";
 import { CalendarEvent, GoogleApiResponse } from "../types";
 
 const fetchCalendarList = async (
@@ -13,25 +15,24 @@ const fetchCalendarList = async (
   return res.data.items;
 };
 
-interface Props {
-  calendarId: string;
-}
-
-export default function MeetingScheduleContainer({ calendarId }: Props) {
+export default function MeetingScheduleContainer() {
+  const { officeFloor } = useSelector((state) => state as AppState);
   const [loading, setLoading] = useState(false);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
 
-  useEffect(() => {
-    setLoading(true);
-    fetchCalendarList(calendarId)
-      .then((items) => setEvents(items))
-      .catch(console.warn)
-      .finally(() => setLoading(false));
-  }, [calendarId]);
+  const selectedRoom = officeFloor
+    .find((floor) => floor.selected)
+    ?.meetingRooms.find((room) => room.selected);
 
-  return loading ? (
-    <h2>loading ...</h2>
-  ) : (
-    <MeetingSchedules schedules={events} />
-  );
+  useEffect(() => {
+    if (selectedRoom) {
+      setLoading(true);
+      fetchCalendarList(selectedRoom.id)
+        .then((items) => setEvents(items))
+        .catch(console.warn)
+        .finally(() => setLoading(false));
+    }
+  }, [selectedRoom]);
+
+  return <MeetingSchedules loading={loading} events={events} />;
 }

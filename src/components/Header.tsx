@@ -2,7 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import type { DefaultSession } from "next-auth";
 import { signOut } from "next-auth/react";
-import BookingPanel from "./BookingPanel";
 
 const Container = styled.div`
   padding: 0.5rem;
@@ -62,7 +61,6 @@ function Header({ user }: Props) {
         </UserInfo>
         <SignOutBtn onClick={() => signOut()}>Sign Out</SignOutBtn>
       </User>
-      <BookingPanel />
     </Container>
   );
 }

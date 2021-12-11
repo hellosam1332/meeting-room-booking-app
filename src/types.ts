@@ -53,3 +53,15 @@ export interface CalendarEvent {
   guestsCanModify?: boolean;
   recurrence?: any;
 }
+
+export interface OfficeFloor {
+  id: number;
+  selected: boolean;
+  meetingRooms: MeetingRoom[];
+}
+
+export interface MeetingRoom {
+  id: string;
+  name: string;
+  selected: boolean;
+}

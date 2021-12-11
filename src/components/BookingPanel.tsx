@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { OfficeFloor } from "../types";
 
 const Container = styled.div`
   height: 15rem;
@@ -18,36 +19,30 @@ const FloorPicker = styled.div`
   margin: 1rem 0;
 `;
 
-const Level = styled.span`
-  display: inline-blocks;
+const Level = styled.span<{ selected: boolean }>`
+  display: inline-block;
   width: 100%;
   height: 2rem;
   line-height: 2rem;
   text-align: center;
   vertical-align: text-bottom;
+  background-color: ${({ selected }) => selected && "white"};
 `;
 
 interface Props {
-  meetingRooms?: any;
+  officeFloors: OfficeFloor[];
 }
 
-export default function BookingPanel({ meetingRooms }: Props) {
-  const [currentLevel, setCurrentLevel] = React.useState("18F");
-
+export default function BookingPanel({ officeFloors }: Props) {
   return (
     <Container>
       <FloorPicker>
-        <Level>13F</Level>
-        <span>|</span>
-        <Level>14F</Level>
-        <span>|</span>
-        <Level>15F</Level>
-        <span>|</span>
-        <Level>16F</Level>
-        <span>|</span>
-        <Level>17F</Level>
-        <span>|</span>
-        <Level>18F</Level>
+        {officeFloors.map((floor) => (
+          <Level
+            key={floor.id}
+            selected={floor.selected}
+          >{`${floor.id}F`}</Level>
+        ))}
       </FloorPicker>
     </Container>
   );
