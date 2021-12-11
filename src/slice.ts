@@ -20,7 +20,21 @@ const initialState: AppState = {
 const { actions, reducer } = createSlice({
   name: "booking-app",
   initialState,
-  reducers: {},
+  reducers: {
+    selectOfficeFloor(state, { payload }) {
+      const targetId = payload;
+
+      return {
+        ...state,
+        officeFloor: state.officeFloor.map((floor) => ({
+          ...floor,
+          selected: floor.id === targetId,
+        })),
+      };
+    },
+  },
 });
 
 export default reducer;
+
+export const { selectOfficeFloor } = actions;
