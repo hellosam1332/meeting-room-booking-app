@@ -61,6 +61,7 @@ export interface OfficeFloor {
 }
 
 export interface MeetingRoom {
+  floorId: number;
   id: string;
   name: string;
   selected: boolean;
