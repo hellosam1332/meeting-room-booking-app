@@ -41,7 +41,9 @@ export default function FloorPicker({ officeFloors }: Props) {
           key={floor.id}
           selected={floor.selected}
           onClick={handleClickLevel(floor.id)}
-        >{`${floor.id}F`}</Level>
+        >
+          {`${floor.id}F`}
+        </Level>
       ))}
     </Container>
   );
