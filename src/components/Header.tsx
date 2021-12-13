@@ -5,7 +5,7 @@ import { signOut } from "next-auth/react";
 
 const Container = styled.div`
   padding: 0.5rem;
-  background-color: #c49ecf;
+  background-color: #6868ab;
 `;
 
 const User = styled.div`
@@ -34,7 +34,7 @@ const UserName = styled.span`
 const SignOutBtn = styled.button`
   border: 2px solid #3c4856;
   padding: 0.5em;
-  background-color: #c49ecf;
+  background-color: #6868ab;
   border-radius: 20px;
   font-size: large;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
