@@ -1,10 +1,10 @@
 import { useSession } from "next-auth/react";
 import { Provider } from "react-redux";
 import styled from "@emotion/styled";
-import User from "../src/components/User";
-import MeetingScheduleContainer from "../src/container/MeetingScheduleContainer";
 import store from "../src/store";
 import BookingPanelContainer from "../src/container/BookingPanelContainer";
+import MeetingScheduleContainer from "../src/container/MeetingScheduleContainer";
+import User from "../src/components/User";
 
 const Header = styled.div`
   min-height: 16rem;

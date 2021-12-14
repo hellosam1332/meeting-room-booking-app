@@ -9,7 +9,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  /* border: 2px solid #333; */
   border-radius: 30px;
   margin: 1rem 0 1.5rem;
   background-color: #6868ba;
