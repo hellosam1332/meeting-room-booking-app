@@ -1,6 +1,7 @@
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
+import useAsync from "../hooks/useAsync";
 import MeetingSchedules from "../components/MeetingSchedules";
 import { AppState } from "../slice";
 import { CalendarEvent, GoogleApiResponse } from "../types";
@@ -17,8 +18,7 @@ const fetchCalendarList = async (
 
 export default function MeetingScheduleContainer() {
   const { officeFloor } = useSelector((state) => state as AppState);
-  const [loading, setLoading] = useState(false);
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const { status, data: events, run } = useAsync<CalendarEvent[]>();
 
   const selectedRoom = officeFloor
     .find((floor) => floor.selected)
@@ -26,13 +26,11 @@ export default function MeetingScheduleContainer() {
 
   useEffect(() => {
     if (selectedRoom) {
-      setLoading(true);
-      fetchCalendarList(selectedRoom.id)
-        .then((items) => setEvents(items))
-        .catch(console.warn)
-        .finally(() => setLoading(false));
+      run(fetchCalendarList(selectedRoom.id));
     }
-  }, [selectedRoom]);
+  }, [run, selectedRoom]);
 
-  return <MeetingSchedules loading={loading} events={events} />;
+  return (
+    <MeetingSchedules loading={status === "PENDING"} events={events || []} />
+  );
 }
