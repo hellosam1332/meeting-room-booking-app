@@ -7,6 +7,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  html, 
+  body {
+    font-size: 4vw;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

@@ -9,19 +9,25 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  border: 1px solid #5f0080;
-  border-radius: 5px;
-  margin: 1rem 0;
+  border-radius: 30px;
+  margin: 1rem 0 1.5rem;
+  background-color: #6868ba;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 7px 14px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 `;
 
 const Level = styled.span<{ selected: boolean }>`
   display: inline-block;
-  width: 100%;
-  height: 2rem;
-  line-height: 2rem;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  font-weight: ${({ selected }) => (selected ? 700 : 400)};
+  line-height: 2.5em;
   text-align: center;
   vertical-align: text-bottom;
-  background-color: ${({ selected }) => selected && "white"};
+  background-color: ${({ selected }) => selected && "#FAF8FF"};
+  transition-property: background-color;
+  transition-duration: 0.5s;
 `;
 
 interface Props {

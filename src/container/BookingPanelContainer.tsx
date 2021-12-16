@@ -6,14 +6,10 @@ export default function BookingPanelContainer() {
   const { officeFloor } = useSelector((state) => state as AppState);
   const selectedFloor = officeFloor.find((floor) => floor.selected);
 
-  if (!selectedFloor) {
-    return null;
-  }
-
-  return (
+  return selectedFloor ? (
     <BookingPanel
       officeFloors={officeFloor}
       selectedMeetingRoom={selectedFloor.meetingRooms}
     />
-  );
+  ) : null;
 }

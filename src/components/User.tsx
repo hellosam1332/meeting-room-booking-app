@@ -4,11 +4,6 @@ import type { DefaultSession } from "next-auth";
 import { signOut } from "next-auth/react";
 
 const Container = styled.div`
-  padding: 0.5rem;
-  background-color: #6868ab;
-`;
-
-const User = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,22 +20,26 @@ const ProfileImg = styled.img`
   height: 2.5rem;
   margin-right: 0.25rem;
   border-radius: 50%;
+  border: 1px solid #00185c;
 `;
 
 const UserName = styled.span`
-  font-size: small;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 const SignOutBtn = styled.button`
-  border: 2px solid #3c4856;
   padding: 0.5em;
-  background-color: #6868ab;
-  border-radius: 20px;
-  font-size: large;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 0.5em;
+  text-decoration: underline;
+  background-color: transparent;
   transition: 0.5s;
+  cursor: pointer;
 `;
 
 interface Props {
@@ -54,13 +53,11 @@ function Header({ user }: Props) {
 
   return (
     <Container>
-      <User>
-        <UserInfo>
-          <ProfileImg src={user.image ?? ""} />
-          <UserName>{user.name}</UserName>
-        </UserInfo>
-        <SignOutBtn onClick={() => signOut()}>Sign Out</SignOutBtn>
-      </User>
+      <UserInfo>
+        <ProfileImg src={user.image ?? ""} />
+        <UserName>{user.name}</UserName>
+      </UserInfo>
+      <SignOutBtn onClick={() => signOut()}>sign out</SignOutBtn>
     </Container>
   );
 }
