@@ -36,12 +36,15 @@ export default function EventCard({ event }: Props) {
   return (
     <Container>
       <EventSummary>📆 {event.summary}</EventSummary>
-      <EventStartEndTime>
-        ✨
-        {`${formatDateTime(event.start.dateTime)} ~ ${formatDateTime(
-          event.end.dateTime
-        )}`}
-      </EventStartEndTime>
+
+      {event.start.dateTime && (
+        <EventStartEndTime>
+          ✨
+          {`${formatDateTime(event.start.dateTime)} ~ ${formatDateTime(
+            event.end.dateTime
+          )}`}
+        </EventStartEndTime>
+      )}
     </Container>
   );
 }
