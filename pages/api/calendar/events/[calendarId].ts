@@ -34,6 +34,7 @@ export default async function event(req: NextApiRequest, res: NextApiResponse) {
             singleEvents: true,
             timeMin: getFormattedTime(currentDate),
             timeMax: getFormattedTime(tomorrow),
+            orderBy: "startTime",
           },
         }
       );
