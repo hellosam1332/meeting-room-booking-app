@@ -5,6 +5,7 @@ import useAsync from "../hooks/useAsync";
 import MeetingSchedules from "../components/MeetingSchedules";
 import { AppState } from "../slice";
 import { CalendarEvent, GoogleApiResponse } from "../types";
+import sortEvents from "../sortEvents";
 
 const fetchCalendarList = async (
   calendarId: string
@@ -19,6 +20,7 @@ const fetchCalendarList = async (
 export default function MeetingScheduleContainer() {
   const { officeFloor } = useSelector((state) => state as AppState);
   const { status, data: events, run } = useAsync<CalendarEvent[]>();
+  const sortedEvents = events !== null ? sortEvents({ events }) : [];
 
   const selectedRoom = officeFloor
     .find((floor) => floor.selected)
@@ -31,6 +33,6 @@ export default function MeetingScheduleContainer() {
   }, [run, selectedRoom]);
 
   return (
-    <MeetingSchedules loading={status === "PENDING"} events={events || []} />
+    <MeetingSchedules loading={status === "PENDING"} events={sortedEvents} />
   );
 }
