@@ -1,0 +1,149 @@
+[
+  {
+    "id": 13,
+    "meetingRooms": [
+      {
+        "name": "마카미디아", 
+        "id": "c_0o5jvn5jldqtpppvvk5810trl0@group.calendar.google.com"
+      },
+      {
+        "name": "아보카도", 
+        "id": "c_151eqmd22097ba8j6tv0ar5efk@group.calendar.google.com"
+      },
+      {
+        "name": "방울토마토", 
+        "id": "c_9sljsu836iv1asj2k2ro6ko2vc@group.calendar.google.com"
+      },
+      {
+        "name": "시금치", 
+        "id": "c_r2glil0hliu8i3nm03hdf3ql18@group.calendar.google.com"
+      },
+      {
+        "name": "제주당근", 
+        "id": "c_cgnmavkop2drf6mpr8sal603bo@group.calendar.google.com"
+      },
+      {
+        "name": "브로콜리", 
+        "id": "c_l14851ochhafuqk2uhcobfq5sc@group.calendar.google.com"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "meetingRooms": [
+      {
+        "name": "샤인머스켓", 
+        "id": "c_vg7cdpabp6d9le2v5lutr7nm58@group.calendar.google.com"
+      },
+      {
+        "name": "블루베리", 
+        "id": "c_krk5dioj2eb6qv8qtso43bvin8@group.calendar.google.com"
+      },
+      {
+        "name": "애플망고", 
+        "id": "c_2ntqia72iqf4qv12lj0a2cam9s@group.calendar.google.com"
+      },
+      {
+        "name": "쌀떡볶이", 
+        "id": "c_5mu20nb37ddtmto42havpl8p58@group.calendar.google.com"
+      },
+      {
+        "name": "열무김치", 
+        "id": "c_gdcf4gkmblpjq0shftpm2ald54@group.calendar.google.com"
+      },
+      {
+        "name": "메리퀸딸기", 
+        "id": "c_5ip8mv14jl5imto8rcg0j3v360@group.calendar.google.com"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "meetingRooms": [
+      {
+        "name": "해양심층수", 
+        "id": "c_7kphcvge15shul7irvmm2qs7u8@group.calendar.google.com"
+      },
+      {
+        "name": "동물복지우유", 
+        "id": "c_rb7dpbetvrpm7vg42mbur03qb8@group.calendar.google.com"
+      },
+      {"name": "밀크티", "id": ""},
+      {
+        "name": "그릭요거트", 
+        "id": "c_o09g26d404arjte9mp0rvkggqo@group.calendar.google.com"
+      },
+      {
+        "name": "왕바지락", 
+        "id": "c_q2lig1gi2egs22hs33toh7of40@group.calendar.google.com"
+      },
+      {
+        "name": "밀싹주스", 
+        "id": "c_gm73tv36vkl61ndgl6rgr078k0@group.calendar.google.com"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "meetingRooms": [
+      {
+        "name": "토마호크", 
+        "id": "c_qslsg84640cdcd43l5tr2s2gcg@group.calendar.google.com"
+      },
+      {
+        "name": "채끝", 
+        "id": "c_r4p8mjhgtktofqc4qh3ph9ggqo@group.calendar.google.com"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "meetingRooms": [
+      {
+        "name": "모닝룸", 
+        "id": "c_bvuql42kcv5qkimsqjqont41qs@group.calendar.google.com"
+      },
+      {
+        "name": "까망베르", 
+        "id": "c_nbopjcngse5ppe11nb13jhfjks@group.calendar.google.com"
+      },
+      {
+        "name": "통밀식빵", 
+        "id": "c_27oha1p3h2fcd5162mj623nd2s@group.calendar.google.com"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "meetingRooms": [
+      {
+        "name": "보라보라",
+        "id": "kurlycorp.com_0kslbk188b04cofg1tvdl396oc@group.calendar.google.com"
+      },
+      {
+        "name": "산토리니",
+        "id": "c_t7g57i756t8roa2bts4d8rmvhk@group.calendar.google.com"
+      },
+      {
+        "name": "갈라파고스", 
+        "id": "kurlycorp.com_2h1d33nbrejh0j8d5rurudddi8@group.calendar.google.com"
+      },
+      {
+        "name": "독도", 
+        "id": "c_mfp9i93o7p41nuf3ctkgadu9r0@group.calendar.google.com"
+      },
+      {
+        "name": "세이셸", 
+        "id": "c_nc91ol8eqe3hlefjvd0vsqh558@group.calendar.google.com"
+      },
+      {
+        "name": "몰디브", 
+        "id": "c_931rbrm3o10eo7875m3777rkbk@group.calendar.google.com"
+      },
+      {
+        "name": "마다가스카르", 
+        "id": "kurlycorp.com_rf1e79umf74lud6oscn2liuh5s@group.calendar.google.com"
+      }
+    ]
+  }
+]
