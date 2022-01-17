@@ -1,5 +1,20 @@
+
+
 myNextApplication:
   component: "@sls-next/serverless-component@latest"
   inputs:
+    domain: ["meeting-room", "play.kurlycorp.com"]
+    name:
+      defaultLambda: "kmr-default-lambda"
+      apiLambda: "kmr-api-lambda"
+    bucketName: "kurly-meeting-room-2"
+    bucketRegion: "ap-northeast-2"
     cloudfront:
-      comment: 'next deploy'
+      distributionId: "EB30MPOJNCWYQ"
+      comment: 'kurly-meeting-room deploy'
+    plugins: ["serverless-s3-remover"]
+    custom:
+      remover:
+        buckets: ["kurly-meeting-room-2"]
+
+
