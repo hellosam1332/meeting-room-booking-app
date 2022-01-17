@@ -42,6 +42,7 @@
       "react/jsx-props-no-spreading": "off",
       "react/style-prop-object": ["error", { "allow": ["StatusBar"] }],
       "semi": ["error", "always"],
-      "@typescript-eslint/explicit-module-boundary-types": "off"
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/ban-ts-comment": "off"
     }
   }
