@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { MeetingRoom } from "../types";
 import { selectMeetingRoom } from "../slice";
 
+import { event } from "../../lib/gtag";
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -33,8 +35,15 @@ interface Props {
 export default function MeetingRoomPicker({ meetingRooms }: Props) {
   const dispatch = useDispatch();
 
-  const handleSelectRoom = (room: MeetingRoom) => () =>
+  const handleSelectRoom = (room: MeetingRoom) => () => {
     dispatch(selectMeetingRoom(room));
+    event({
+      action: "click",
+      category: "panel",
+      label: "room",
+      value: room.name,
+    });
+  };
 
   return (
     <Container>
