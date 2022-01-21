@@ -27,8 +27,6 @@ async function refreshAccessToken(token: any) {
 
     const refreshedTokens = await response.json();
 
-    console.info("refreshedTokens", refreshedTokens);
-
     if (!response.ok) {
       return {
         ...token,
@@ -39,7 +37,7 @@ async function refreshAccessToken(token: any) {
     return {
       ...token,
       accessToken: refreshedTokens.access_token,
-      accessTokenExpires: Date.now() + refreshedTokens.expires_at * 1000,
+      accessTokenExpires: Date.now() + refreshedTokens.expires_in * 1000,
       refreshToken: refreshedTokens.refresh_token ?? token.refreshToken, // Fall back to old refresh token
     };
   } catch (error) {
@@ -69,8 +67,6 @@ export default NextAuth({
   secret: process.env.SECRET,
   callbacks: {
     async jwt({ token, user, account }) {
-      console.info("account", account);
-
       if (account?.access_token && account.expires_at && user) {
         return {
           ...token,
