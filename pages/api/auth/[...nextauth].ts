@@ -97,5 +97,11 @@ export default NextAuth({
         error: token.error,
       };
     },
+    async redirect() {
+      return "/";
+    },
+  },
+  pages: {
+    signIn: "/signin",
   },
 });

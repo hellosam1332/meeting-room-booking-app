@@ -1,28 +1,21 @@
-import { getProviders, useSession } from "next-auth/react";
-import { ClientSafeProvider } from "next-auth/react/types";
+import { useEffect } from "react";
+
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+
 import Main from "./Main";
-import SignIn from "../src/auth/SignIn";
 
-interface Props {
-  providers: { google: ClientSafeProvider };
-}
-
-const Home = ({ providers }: Props) => {
+const Home = () => {
   const { data: session } = useSession();
+  const router = useRouter();
 
-  return (
-    <>
-      {session && <Main />}
-      {!session && <SignIn provider={providers.google} />}
-    </>
-  );
+  useEffect(() => {
+    if (!session) {
+      router.push("/signin").catch();
+    }
+  }, [session, router]);
+
+  return <Main />;
 };
-
-export async function getServerSideProps() {
-  const providers = await getProviders();
-  return {
-    props: { providers },
-  };
-}
 
 export default Home;
