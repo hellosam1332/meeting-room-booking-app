@@ -4,7 +4,7 @@ import Main from "./Main";
 import SignIn from "../src/auth/SignIn";
 
 interface Props {
-  providers: ClientSafeProvider[];
+  providers: { google: ClientSafeProvider };
 }
 
 const Home = ({ providers }: Props) => {
@@ -13,7 +13,7 @@ const Home = ({ providers }: Props) => {
   return (
     <>
       {session && <Main />}
-      {!session && <SignIn providers={providers} />}
+      {!session && <SignIn provider={providers.google} />}
     </>
   );
 };

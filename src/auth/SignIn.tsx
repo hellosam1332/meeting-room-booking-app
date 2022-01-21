@@ -25,26 +25,25 @@ const SignInButton = styled.button`
   height: 3rem;
   background-color: white;
   border-radius: 40px;
+  border: 1px solid;
 `;
 
 interface Props {
-  providers: ClientSafeProvider[];
+  provider: ClientSafeProvider;
 }
 
-export default function SignIn({ providers }: Props) {
+export default function SignIn({ provider }: Props) {
   return (
     <Container>
       <Title>
         <h3>Kurly meeting room booking app</h3>
       </Title>
       <SignInWrap>
-        {Object.values(providers).map((provider) => (
-          <div key={provider.name}>
-            <SignInButton type="button" onClick={() => signIn(provider.id)}>
-              Sign in with {provider.name}
-            </SignInButton>
-          </div>
-        ))}
+        <div key={provider.name}>
+          <SignInButton type="button" onClick={() => signIn(provider.id)}>
+            Sign in with {provider.name}
+          </SignInButton>
+        </div>
       </SignInWrap>
     </Container>
   );
